@@ -15,8 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf.urls.static import static
+from restaurant import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+    path('admin/', admin.site.urls), 
+    path('littlelemon/', include('littlelemon.urls')),
+    
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
