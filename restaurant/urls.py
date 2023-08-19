@@ -22,5 +22,6 @@ from restaurant import settings
 urlpatterns = [
     path('admin/', admin.site.urls), 
     path('littlelemon/', include('littlelemon.urls')),
+    path('api/', include('littlelemonAPI.urls')),
     
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
