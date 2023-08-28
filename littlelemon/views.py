@@ -30,6 +30,7 @@ class SingleMenuView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
 class MenuView(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
+    permission_classes = [IsAdminOrManager]
 
 def home(request):
     return render(request, 'index.html')
