@@ -153,6 +153,7 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
         'rest_framework.filters.OrderingFilter',
         'rest_framework.filters.SearchFilter',
+        
     ],
     
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -175,6 +176,6 @@ REST_FRAMEWORK = {
 
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',
-        'rest_framework.throttling.UserRateThrottle'
+        'rest_framework.throttling.UserRateThrottle',
     ]
 }

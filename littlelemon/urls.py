@@ -15,9 +15,11 @@ urlpatterns = [
     
     #path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     
-    path('', views.home, name='home'),
+    path('littlelemon/', views.home, name='home'),
 
     path('booking', views.BookingView.as_view(), name='booking'),
+    path('booking/<int:pk>', views.SingleBookingView.as_view()),
+    
     path('menu-items', views.MenuView.as_view(), name= 'menu'),
     path('menu-items/<int:pk>', views.SingleMenuView.as_view()),
 ]

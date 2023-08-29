@@ -9,6 +9,8 @@ mysqlclient = "*"
 mysql-connector-python = "*"
 djangorestframework = "*"
 djoser = "*"
+djangorestframework-filters = "*"
+django-filter = "*"
 
 [dev-packages]
 

@@ -23,7 +23,7 @@ from restaurant import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
-    path('littlelemon/', include('littlelemon.urls')),
+    path('', include('littlelemon.urls')),
     
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),

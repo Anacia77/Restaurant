@@ -14,6 +14,7 @@ class Menu(models.Model):
         return f'{self.title} : {str(self.price)}'
 
 class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=255)
     no_of_guests = models.IntegerField()
     booking_date = models.DateTimeField(auto_now_add=True)
