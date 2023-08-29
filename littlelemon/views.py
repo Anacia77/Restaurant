@@ -62,6 +62,7 @@ class MenuView(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
     permission_classes = [IsAdminOrManager]
+    search_fields = ['title']
     
 def home(request):
     return render(request, 'index.html')

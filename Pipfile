@@ -11,6 +11,7 @@ djangorestframework = "*"
 djoser = "*"
 djangorestframework-filters = "*"
 django-filter = "*"
+bleach = "*"
 
 [dev-packages]
 
